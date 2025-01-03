@@ -24,6 +24,11 @@
     </h3>
 </h2>
 
+Run this command to run the program
+```
+g++ wifi-pass-cracker.cpp -o wifi-pass-cracker; ./wifi-pass-cracker
+```
+
 <!-- Donation -->
 <h2>
     ❤️ Support us
