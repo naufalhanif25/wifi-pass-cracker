@@ -26,6 +26,7 @@ This program is created for educational purposes only. It is strictly forbidden 
 g++ wifi-pass-cracker.cpp -o wifi-pass-cracker; ./wifi-pass-cracker
 ```
 **or**
+
 Run the `wifi-pass-cracker.exe` executable file
 
 <!-- Donation -->
