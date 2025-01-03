@@ -250,7 +250,7 @@ int main() {
             string line;
 
             if (OS == "win") {
-                wlan_show_cmd = "netsh wlan show hostednetwork > temp.bin";
+                wlan_show_cmd = "netsh wlan show networks > temp.bin";
             }
             else if (OS == "linux") {
                 // TODO: Add command for linux
