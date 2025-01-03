@@ -21,10 +21,13 @@
 
 This program is created for educational purposes only. It is strictly forbidden to use this program for crime and other bad things. Be a wise and responsible programmer.
 
-Run this command to run the program
+**Run this command to run the program**
 ```
 g++ wifi-pass-cracker.cpp -o wifi-pass-cracker; ./wifi-pass-cracker
 ```
+**or**
+
+Run the executable file
 
 <!-- Donation -->
 <h2>
