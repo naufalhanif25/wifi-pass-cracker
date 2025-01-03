@@ -190,8 +190,17 @@ int main() {
 
     string line;
 
+    bool first_line = true;
+
     // Loop until the end of the file is reached
     while (!dataset.eof()) {
+        // Skip the first line
+        if (first_line) {
+            first_line = false;
+
+            continue;
+        }
+
         getline(dataset, line);
 
         pass_list.push_back(line);  // Add the line to the vector
@@ -305,14 +314,14 @@ int main() {
 
                     this_thread::sleep_for(chrono::seconds(3));  // Delay for 3 seconds
 
-                    del_prev_line(1);
+                    del_prev_line(2);
 
                     break;  // Break out of the loop
                 }
 
                 // Print the password being attempted and the attempt number
-                cout << "Trying to use the password: " << passwd << endl;
-                cout << "Attemp: " << attemp << endl;
+                cout << "Trying to use the password: " << YELLOW << passwd << WHITE << endl;
+                cout << "Attemp: " << YELLOW << attemp << WHITE << endl;
 
                 // Construct the command to run a Python script to connect to the network
                 string connect_cmd = "python connect.py --ssid \"" + SSID + "\" --passwd \"" + passwd + "\"";
@@ -338,11 +347,11 @@ int main() {
 
                 // Check if connection was successful
                 if (value == 0) {
-                    cout << "Successfully connecting to the network" << endl;
+                    cout << GREEN << "\nSuccessfully connecting to the network" << WHITE << endl;
 
                     this_thread::sleep_for(chrono::seconds(3));  // Delay for 3 seconds
 
-                    del_prev_line(1);
+                    del_prev_line(5);
 
                     break;  // Break out of the loop
                 }

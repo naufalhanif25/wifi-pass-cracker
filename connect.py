@@ -23,7 +23,7 @@ async def connect(ssid, passwd):
     iface.disconnect()
     
     # Wait until fully disconnected
-    for _ in range(50): # Try for 5 seconds
+    for _ in range(30): # Try for 3 seconds
         if iface.status() != const.IFACE_CONNECTED:
             break
         
@@ -47,23 +47,17 @@ async def connect(ssid, passwd):
     iface.connect(tmp_profile)
     
     # Wait until connected or failed
-    for _ in range(30): # Try for 3 seconds
+    for _ in range(20): # Try for 2 seconds
         if iface.status() == const.IFACE_CONNECTED:
             # If connected, write "0" to the log file      
             with open("log.bin", "wb") as file:
                 file.write("0".encode("utf-8"))
                 
             return  # Stop the function
-        elif iface.status() == const.IFACE_DISCONNECTED:
-            # If disconnected, write "1" to the log file
-            with open("log.bin", "wb") as file:
-                file.write("1".encode("utf-8"))
-                
-            return  # Stop the function
         
         await asyncio.sleep(0.1)
     
-    # If not connected within 3 second, write "1" to the log file
+    # If not connected within 2 second, write "1" to the log file
     with open("log.bin", "wb") as file:
         file.write("1".encode("utf-8"))
         
