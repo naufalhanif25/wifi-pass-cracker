@@ -17,12 +17,9 @@
 <!-- Descriptions -->
 <h2>
     📝 Description
-    <h3>
-        <h5>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This program is created for educational purposes only. It is strictly forbidden to use this program for crime and other bad things. Be a wise and responsible programmer.</p>
-        </h5>
-    </h3>
 </h2>
+
+This program is created for educational purposes only. It is strictly forbidden to use this program for crime and other bad things. Be a wise and responsible programmer.
 
 Run this command to run the program
 ```
